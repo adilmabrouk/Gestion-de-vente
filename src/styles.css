@@ -1,1 +1,53 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.mat-list-base .mat-list-item .mat-list-item-content,
+.mat-list-base .mat-list-option .mat-list-item-content {
+  padding: 0 !important;
+}
+
+.mat-menu-content:not(:empty) {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  width: 220px;
+}
+.mat-menu-panel {
+  min-width: 112px;
+  max-width: 112px;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  max-height: calc(100vh - 48px);
+  border-radius: 4px;
+  outline: 0;
+  min-height: 64px;
+}
+
+.swal2-styled.swal2-confirm {
+  background-color: #22b2da !important;
+  color: #fff;
+}
+
+.alert-success {
+  color: #842029;
+  background-color: #f8d7da;
+  border-color: #f5c2c7;
+  padding: 5px 0;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+
+table{
+  box-shadow: none !important;
+  border: none !important;
+}

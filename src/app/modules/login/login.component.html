@@ -1,0 +1,45 @@
+<mat-card>
+   <span><mat-icon color='primary' class="icon">lock</mat-icon>Login Panel</span>
+  <form  (ngSubmit)="onLogin()">
+
+  <flash-messages></flash-messages>
+  <!-- mat-form-field name -->
+
+  <mat-form-field
+    appearance='outline'
+    floatLabel='always'>
+
+    <mat-label>email</mat-label>
+
+    <input
+    type="text"
+    matInput
+    name="email"
+    [(ngModel)] ="email">
+
+  </mat-form-field>
+
+
+<!-- mat-form-field Email -->
+
+  <mat-form-field
+    appearance='outline'
+    floatLabel='always'>
+
+    <mat-label>password</mat-label>
+
+    <input
+    type="password"
+    matInput
+    name="password"
+    [(ngModel)] ="password">
+
+  </mat-form-field>
+
+  <button type="submit" mat-raised-button color='primary' >LOGIN</button>
+  <button (click)="loginWithGoogle()" class="google" type="button" mat-raised-button color='accent' >
+    <mat-icon>mail_outline</mat-icon>
+    LOGIN WITH GOOGLE
+  </button>
+</form>
+</mat-card>

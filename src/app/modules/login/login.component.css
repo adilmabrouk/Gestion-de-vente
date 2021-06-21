@@ -1,0 +1,45 @@
+:host{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+mat-card{
+  width: 400px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+mat-form-field,button{
+  width: 100%;
+}
+
+button{
+  padding: 5px 0;
+}
+.google{
+  margin-top: .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+span{
+   display: flex;
+   align-items: center;
+   margin: 1rem 0;
+   font-size: 2rem;
+   letter-spacing: 2px;
+   font-weight: bold;
+}
+
+.icon{
+
+  padding-right: 2rem;
+  font-size: 2.5rem;
+  padding-bottom: 1rem;
+}

@@ -1,0 +1,74 @@
+<header>
+  <mat-toolbar>
+      <div class="left">
+          <button mat-icon-button>
+            <mat-icon (click) ='toggleSideBar()'>menu</mat-icon>
+          </button>
+          <span>Application</span>
+      </div>
+      <div class="right">
+          <button mat-button  [matMenuTriggerFor]="beforeMenu" class="translate">
+            <mat-icon>translate</mat-icon>
+            English
+          </button>
+
+          <mat-menu class="menu" #beforeMenu="matMenu" xPosition="before">
+            <button mat-menu-item>English</button>
+            <button mat-menu-item>Frensh</button>
+            <button mat-menu-item>Arabic</button>
+          </mat-menu>
+
+          <div class="images">
+            <button mat-button [matMenuTriggerFor]="Menu" class="info">
+               <img src="assets/photo.png" alt="">
+                <span>Admin</span>
+            </button>
+
+            <mat-menu #Menu="matMenu" xPosition="before">
+              <mat-list-item role="listitem">
+                <button class="item" mat-button>
+                  <a href="">
+                    <mat-icon>person</mat-icon>
+                    Profile
+                  </a>
+                </button>
+              </mat-list-item>
+
+              <mat-list-item role="listitem">
+                <button class="item" mat-button>
+                  <a href="">
+                    <mat-icon>https</mat-icon>
+                    Change Password
+                  </a>
+                </button>
+              </mat-list-item>
+
+              <mat-list-item role="listitem">
+                <button class="item" mat-button>
+                  <a href="">
+                    <mat-icon>grid_view</mat-icon>
+                    Workspaces
+                  </a>
+                </button>
+              </mat-list-item>
+
+              <mat-list-item role="listitem">
+                <button class="item" mat-button>
+                  <a href="">
+                    <mat-icon>sync_alt</mat-icon>
+                     API
+                  </a>
+                </button>
+              </mat-list-item>
+
+              <mat-list-item role="listitem">
+                <button (click) ='logOut()' class="log" mat-button>
+                    <mat-icon>logout</mat-icon>
+                     Sign Out
+                </button>
+              </mat-list-item>
+            </mat-menu>
+          </div>
+      </div>
+  </mat-toolbar>
+</header>

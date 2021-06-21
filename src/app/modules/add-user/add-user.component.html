@@ -1,0 +1,103 @@
+<mat-dialog-content class="mat-typography">
+
+  <span>ADD NEW USER</span>
+
+<form
+
+    [formGroup]='forms'
+    (ngSubmit)='addUser(users)'>
+
+  <!-- mat-form-field name -->
+
+  <mat-form-field
+      appearance='outline'
+      floatLabel='always'>
+
+    <mat-label>Name</mat-label>
+
+    <input
+        [(ngModel)]="users.name"
+        formControlName='name'
+        matInput
+        type="text">
+
+    <mat-error *ngIf="name.touched && name.invalid">
+        <span *ngIf="name.errors.required"> Please fill out this field!</span>
+        <span *ngIf="name.errors.minlength"> this field must be at least 3 caracters</span>
+        <span *ngIf="name.errors.pattern"> Please enter a valid name</span>
+    </mat-error>
+
+  </mat-form-field>
+
+<!-- mat-form-field Email -->
+
+  <mat-form-field
+      appearance='outline'
+      floatLabel='always'>
+
+    <mat-label>Email</mat-label>
+
+    <input
+    [(ngModel)]="users.email"
+    formControlName='email'
+    type="email"
+    matInput>
+
+    <mat-error *ngIf="email.touched && email.invalid">
+      <span *ngIf="email.errors.required"> Please fill out this field!</span>
+      <span *ngIf="email.errors.email"> Please enter a valid email!</span>
+  </mat-error>
+
+  </mat-form-field>
+
+  <!-- mat-form-field Select -->
+
+  <mat-form-field
+      appearance='outline'
+      floatLabel="always">
+
+    <mat-label>Role</mat-label>
+
+    <mat-select
+        [(ngModel)]="users.roles"
+        formControlName='roles'>
+
+      <mat-option>--</mat-option>
+      <mat-option  value="Admin">Admin</mat-option>
+      <mat-option  value="Costum Role">Costum Role</mat-option>
+
+    </mat-select>
+
+    <mat-error *ngIf="roles.touched && roles.invalid">
+      Please make a choice!
+    </mat-error>
+
+  </mat-form-field>
+
+
+   <div class="buttons">
+    <button
+      [disabled]="forms.invalid"
+      type="submit"
+      mat-raised-button
+      color='primary'
+      mat-dialog-close>
+
+      <mat-icon>save</mat-icon>
+      SAVE
+    </button>
+
+    <button
+       type="button"
+       mat-button
+       mat-dialog-close>
+
+      <mat-icon>clear</mat-icon>
+      CANCEL
+    </button>
+
+   </div>
+</form>
+
+</mat-dialog-content>
+

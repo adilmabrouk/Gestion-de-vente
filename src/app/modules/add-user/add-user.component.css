@@ -1,0 +1,28 @@
+
+span{
+  font-size: 1.5rem;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  width: 40vw;
+}
+
+button{
+  margin-right: 1rem;
+  padding-top: .2rem;
+}
+mat-icon{
+  padding-right: .3rem;
+  padding-bottom: .2rem;
+}
+mat-label{
+  font-size: 1.3rem;
+}
+
+mat-error span
+{
+  font-size: .8rem;
+  padding-bottom: .5rem !important;
+}
